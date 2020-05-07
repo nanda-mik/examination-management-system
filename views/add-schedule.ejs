@@ -1,0 +1,38 @@
+<%- include('includes/head.ejs') %>
+     <main>
+        <div class="container py-md-5">
+            <div class="row align-items-center">
+              <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+                <form class="addschedule-form" action="/admin/add-exam-room" method="POST">
+                    <div class="form-group">
+                        <label for="year">Enter Year</label>
+                        <input type="text" name="year"  class="form-control form-control-sm input-dark" autocomplete="off" placeholder="year" id="year">
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Enter Branch</label>
+                        <input type="text" name="branch"  class="form-control form-control-sm input-dark" autocomplete="off" placeholder="branch" id="branch">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Enter Subject</label>
+                        <input type="text" name="sub"  class="form-control form-control-sm input-dark" autocomplete="off" placeholder="subject" id="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="date_of_exam">Enter Date Of Exam</label>
+                        <input type="date" name="date"  class="form-control form-control-sm input-dark" autocomplete="off" id="date_of_exam">
+                    </div>
+                    <div class="form-group">
+                        <label for="start_time">Enter Start Time</label>
+                        <input type="time" name="start_time"  class="form-control form-control-sm input-dark" autocomplete="off" id="start_time">
+                    </div>
+                    <div class="form-group">
+                        <label for="end_time">Enter End Time</label>
+                        <input type="time" name="end_time"  class="form-control form-control-sm input-dark" autocomplete="off" id="end_time">
+                    </div>
+                    <button class="py-3 mt-4 btn btn-lg btn-success btn-block" type="submit">Assign Schedule</button>
+                </form>
+              </div>
+            </div>
+        </div>
+     </main>
+
+ <%- include('includes/end.ejs') %>

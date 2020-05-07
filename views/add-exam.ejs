@@ -1,0 +1,26 @@
+<%- include('includes/head.ejs') %>
+     <main>
+        <div class="container py-md-5">
+            <div class="row align-items-center">
+              <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+                <form class="addexam-form" action="/admin/add-exam" method="POST">
+                    <div class="form-group">
+                        <label for="date">Enter Date Of Exam</label>
+                        <input type="date" name="date"  class="form-control form-control-sm input-dark" autocomplete="off" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="start_time">Enter Start Time</label>
+                        <input type="time" name="start_time"  class="form-control form-control-sm input-dark" autocomplete="off" id="start_time">
+                    </div>
+                    <div class="form-group">
+                        <label for="end_time">Enter End Time</label>
+                        <input type="time" name="end_time"  class="form-control form-control-sm input-dark" autocomplete="off" id="end_time">
+                    </div>
+                    <button class="py-3 mt-4 btn btn-lg btn-success btn-block" type="submit">Add Exam Details</button>
+                </form>
+              </div>
+            </div>
+        </div>
+     </main>
+
+ <%- include('includes/end.ejs') %>

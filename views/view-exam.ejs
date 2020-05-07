@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+
+    <div class="table-data">
+    <h2>Exam Details</h2>
+    <table border="1">
+        <tr>
+            <th>Serial No.</th>
+            <th>Date Of Exam</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+        </tr>
+        
+        <%
+        if(data.length!=0){
+        var i=1;
+        data.forEach(function(rows){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=rows.date_of_exam %></td>
+            <td><%=rows.start_time %></td>
+            <td><%=rows.end_time %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+
+<%- include('includes/end') %>

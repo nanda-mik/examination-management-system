@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+
+    <div class="table-data">
+    <h2>Student Details</h2>
+    <table border="1">
+        <tr>
+            <th>Serial No.</th>
+            <th>Full Name</th>
+            <th>Student Id</th>
+            <th>Branch</th>
+            <th>Year</th>
+        </tr>
+        
+        <%
+        if(data.length!=0){
+        var i=1;
+        data.forEach(function(rows){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=rows.s_name %></td>
+            <td><%=rows.s_id %></td>
+            <td><%=rows.b_name %></td>
+            <td><%=rows.y_name %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+
+<%- include('includes/end') %>

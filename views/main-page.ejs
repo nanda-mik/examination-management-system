@@ -1,0 +1,19 @@
+<%- include('includes/head') %>
+
+<div class="container py-md-5">
+  <div class="row align-items-center">
+    <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+      <form action="/hall-ticket" method="POST">
+          <div class="form-group">
+            <label for="branch_id">Student ID</label>
+            <input name="branch_id" class="form-control form-control-sm input-dark" type="text" placeholder="Student ID" autocomplete="off" id="branch_id">
+          </div>
+          <div id="btn-div">
+            <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block" id="btn-room">Get Room No.</button>
+            <button type="submit" formaction="/viewSchedule" class="py-3 mt-4 btn btn-lg btn-success btn-block" id="btn-sch">Get Exam Schedule</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('includes/end') %>

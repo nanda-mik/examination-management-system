@@ -1,0 +1,27 @@
+<%- include('includes/head.ejs') %>
+
+<div id="studroom">
+    <% if(data.length!=0){ %>
+    <h2>Hall Ticket</h2>
+    <dl class="dl-horizontal">
+        <dt>Student Name:</dt>
+        <dd><%= data[0].s_name %></dd>
+        <dt>Student Id:</dt>
+        <dd><%= data[0].s_id %></dd>
+        <dt>Branch:</dt>
+        <dd><%= data[0].b_name %></dd>
+        <dt>Year:</dt>
+        <dd><%= data[0].y_name %></dd>
+        <dt>Room No.</dt>
+        <dd><%= data[0].room_name %></dd>
+      </dl>
+      <% }else { %>
+        <tr>
+            <td colspan="7">No Data Found</td>
+        </tr>
+    <% } %>
+
+</div>
+
+
+<%- include('includes/end') %>

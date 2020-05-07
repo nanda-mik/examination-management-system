@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+
+    <div class="table-data">
+    <h2>Branch Details</h2>
+    <table border="1">
+        <tr>
+            <th>Serial No.</th>
+            <th>Branch Name</th>
+        </tr>
+        
+        <%
+        if(data.length!=0){
+        var i=1;
+        data.forEach(function(rows){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=rows.b_name %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+
+<%- include('includes/end') %>
